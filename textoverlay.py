@@ -24,14 +24,17 @@ if (cap.isOpened()== False):
   print("Error opening video stream or file")
 
 text = input("Enter the text to be displayed >>>")
-
+position = int(input("Enter position (Default = Bottom-middle). Options: Bottom-left(0) Top-Left(2) Bottom-middle(4)>>>"))
+pos_arr = [9, 467, 9, 30, 233, 458]
+if position != 0 and position != 2 and position != 4:
+  position = 4
 # Read until video is completed
 while(cap.isOpened()):
   # Capture frame-by-frame
   ret, frame = cap.read()
   if ret == True:
     
-    draw_label(frame, text, (232,460), (255,255,255))
+    draw_label(frame, text, (pos_arr[position],pos_arr[position+1]), (255,255,255))
     
     # Display the resulting frame
     cv2.imshow('Frame',frame)
