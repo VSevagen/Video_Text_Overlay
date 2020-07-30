@@ -29,9 +29,9 @@ if (cap.isOpened()== False):
   print("Error opening video stream or file")
 
 text = input("Enter the text to be displayed >>>")
-position = int(input("Enter position (Default = Bottom-middle). Options: Bottom-left(0) Top-Left(2) Bottom-middle(4)>>>"))
+position = input("Enter position (Default = Bottom-middle). Options: Bottom-left(0) Top-Left(2) Bottom-middle(4)>>>")
 pos_arr = [9, 467, 9, 30, 233, 458]
-if position != 0 and position != 2 and position != 4:
+if position != "0" and position != "2" and position != "4":
   position = 4
 # Read until video is completed
 while(cap.isOpened()):
