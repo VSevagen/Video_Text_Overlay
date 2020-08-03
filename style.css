@@ -54,3 +54,7 @@ button {
 #inputSec {
   display: none;
 }
+
+#content {
+  width: 100%;
+}
