@@ -25,6 +25,9 @@ button.addEventListener('click', () => {
   Twilio.Video.createLocalVideoTrack().then(track => {
     container.append(track.attach());
     button.remove();
+    // Show textarea on trigger
     document.getElementById("inputSec").style.display = 'block';
+    // Set border once webcam activated
+    document.getElementById("video-container").style.border = '5px solid #007bff';
   });
 })
