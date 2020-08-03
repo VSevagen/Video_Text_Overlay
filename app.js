@@ -35,5 +35,6 @@ button.addEventListener('click', () => {
   Twilio.Video.createLocalVideoTrack().then(track => {
     container.append(track.attach());
     button.remove();
+    document.getElementById("inputSec").style.display = 'block';
   });
 })
